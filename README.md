@@ -21,6 +21,6 @@ A simple Todo List application that allows users to add tasks, mark them as comp
 - **JavaScript**: For functionality (adding, completing, and deleting tasks) and local storage integration.
 
 ## How to Run Locally
-1. Clone the repository: </b>git clone https://github.com/yourusername/todo-list.git
+1. Clone the repository: <b>git clone https://github.com/yourusername/todo-list.git
 2. Open the **index.html** file in a web browser of your choice.
    
