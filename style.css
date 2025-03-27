@@ -1,0 +1,116 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', 'sans-serif';
+	box-sizing: border-box; /* Padding and Margin are included*/
+}
+
+.container {
+	width: 100%;
+	min-height: 100vh; /* Makes the container cover 100% of the viewport, will expand*/
+	background: linear-gradient(115deg, #caf0f8, #00B4D8); 
+	padding: 10px;
+}
+
+.todo-list {
+	width: 100%;
+	max-width: 540px;
+	background: white;
+	margin: 100px auto 20px;
+	padding: 40px 30px 70px;
+	border-radius: 10px;
+}
+
+.todo-list h2 {
+	color: #000;
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.todo-list img {
+	width: 40px;
+	margin-left: 10px;
+}
+
+.user-input {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #e0e0e0;
+	border-radius: 30px;
+	padding-left: 20px;
+	margin-bottom: 25px;
+}
+input {
+	flex: 1;
+	border: none;
+	outline: none;
+	background: transparent;
+	padding: 10px;
+}
+
+button {
+	border: none;
+	outline: none;
+	background: #FB8500;
+	border-radius: 30px;
+	padding: 16px 50px;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+	
+}
+
+button:hover {
+	background: #ff8f0f;
+}
+
+ul li {
+	padding: 12px 8px 12px 50px; /* 50px on left leaves room for the checkmark */
+	list-style: none; /* Removes the bullet points*/
+	font-size: 17px;
+	cursor: pointer;
+	user-select: none; /* Makes the text itself not selectable*/
+	position: relative;
+}
+
+ul li::before {
+	content: '';
+	position: absolute;
+	height: 28px;
+	width: 28px;
+	border-radius: 50%;
+	background-image: url(images/unchecked.png);
+	background-size: cover; /* Scales to the smallest size to fill the container*/
+	background-position: center;
+	top: 8px; /* Property when position is absolute*/
+	left: 8px;
+
+}
+
+ul li.checked {
+	color: #a9a9a9;
+	text-decoration: line-through;
+}
+
+ul li.checked::before {
+	background-image: url(images/checked.png);
+}
+
+ul li span {
+	position: absolute;
+	right: 0;
+	top: 5px;
+	width: 40px;
+	height: 40px;
+	font-size: 22px;
+	color: #747474;
+	line-height: 40px;
+	text-align: center;
+}
+
+ul li span:hover {
+	background-color: #e7e7e7;
+	border-radius: 50%;
+}
